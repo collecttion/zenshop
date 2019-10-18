@@ -2,7 +2,7 @@
 const express = require("express");
 const app = express();
 const pug = require("pug");
-var port = process.end.PORT || 3000;
+var port = 3000;
 const mongoose = require('mongoose');
 const Post = require('./models/post.models');
 const bodyParser = require('body-parser');
@@ -69,7 +69,7 @@ app.post('/create', upload.single('imgeFile'), async function(req, res){
         if(error)
             return res.json({ posts : posts })
     })
-    res.redirect('create/table')
+    res.redirect('/post')
 
 })
 //delete
